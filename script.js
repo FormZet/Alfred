@@ -1,10 +1,23 @@
 $(document).ready(function (){
-	var alfredSpeech ='Привет людишки';
-	$('.js-showHide').click(function(){
-		$('.alfred').toggleClass('-invisible');
-	});
- 
-	$('.js-hello').click(function(){
-		$('.bubble') .text(alfredSpeech)
-	})
+	var input ='323228'
+	$('.js-count').click(function(){
+		showBubble($('.js-firstNumber').val() + $('.js-secondNumber').val());
+ 	});
+ 	
+ 	function showFirstInput(){
+ 		var inputText = $('.js-firstNumber').val();
+ 		if (inputText ==="") {
+ 			showBubble("TI SHO, DEBIL? ");
+ 		} else {
+ 			showBubble(inputText);
+ 		}
+ 	}
+
+ 	function showBubble(text) {
+		$('.bubble').text(text);
+		$('.bubble').addClass('-visible');
+		setTimeout(function() {
+			$('.bubble').removeClass('-visible');
+		}, 2000);
+	}
 });

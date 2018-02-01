@@ -2,8 +2,14 @@ body{
 	margin:0;
 	font-family: "Trebuchet MS";
 	background-color: #f4f4f4;
+	background-image: url(img/Back.jpg);
+	background-size: cover;
+}
+* {
+	box-sizing: border-box;
 }
 .control-pannel{
+	padding: 25px;
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -27,14 +33,16 @@ body{
 }
 .bubble{
 	position: absolute;
-	right: -40px;
+	right: -160px;
 	top: -20px;
 	padding: 40px;
 	background-color: white;
-	color: black
+	color: black;
+	opacity: 0;
 	font-weight:900;
 	border-radius: 15px;
-	LEVHAZKERLEVHAZKER
+	transition: .4s;
+	min-width: 240px;
 }	
 
 .bubble:before{
@@ -46,4 +54,33 @@ body{
 	background-color: white;
 	width: 15px;
 	height: 15px;
+}
+.bubble.-visible{
+	opacity: 1;
+}	
+.bubble.-hov{
+	background-color: yellow;
+}
+button{
+	text-align: center;
+	background-color: #f4f4f4;
+	transition: .2s
+}
+input, button{
+	border-radius: 4px;
+	padding: 6px;
+	font-size: 13px;
+	font-weight: 900;
+	border: none;
+	outline: none;
+}
+input{
+	margin-bottom: 20px;
+}
+button:hover{
+background-color: black;
+color: white;
+}
+button:active{
+	background-color: red;
 }

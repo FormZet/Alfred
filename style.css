@@ -5,6 +5,12 @@ body{
 	background-image: url(img/Back.jpg);
 	background-size: cover;
 }
+.hell{
+	background-image: url(img/Back.jpg);
+}
+.heaven{
+	background-image: url(img/heaven.jpg);
+}
 * {
 	box-sizing: border-box;
 }
